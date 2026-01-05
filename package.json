@@ -1,0 +1,33 @@
+{
+  "name": "clockpunk-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Clockpunk premium brand website - monorepo",
+  "scripts": {
+    "dev": "npm run dev --workspace=apps/web",
+    "dev:studio": "npm run dev --workspace=apps/studio",
+    "build": "npm run build --workspace=apps/web",
+    "build:studio": "npm run build --workspace=apps/studio",
+    "lint": "npm run lint --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "clean": "rm -rf node_modules apps/*/node_modules apps/*/.next apps/*/dist"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=18.17.0",
+    "npm": ">=9.0.0"
+  },
+  "dependencies": {
+    "next-sanity": "^12.0.8"
+  },
+  "overrides": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "styled-jsx": {
+      "react": "18.3.1"
+    }
+  }
+}

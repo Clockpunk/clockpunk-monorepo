@@ -1,0 +1,25 @@
+node_modules/
+.next/
+.turbo/
+dist/
+build/
+.env
+.env*.local
+.vercel
+.sanity
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Testing
+coverage/
+.nyc_output/
